@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2fa1b6182b084b4b92c10f007673475e" Name="Diagram1" ZoomLevel="81">
+        <EntityTypeShape EntityType="HotelDBModel.Booking" Width="1.5" PointX="5.375" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelDBModel.Calendar" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelDBModel.CancellationPolicy" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelDBModel.Coutnry" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelDBModel.EmailTemplate" Width="1.5" PointX="4.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelDBModel.Hall" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelDBModel.Post" Width="1.5" PointX="6.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelDBModel.Property" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelDBModel.RatePlan" Width="1.5" PointX="8.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelDBModel.RateSlab" Width="1.5" PointX="2.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelDBModel.Room" Width="1.5" PointX="4.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelDBModel.RoomNumber" Width="1.5" PointX="10.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelDBModel.RoomPicture" Width="1.5" PointX="10.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelDBModel.Setting" Width="1.5" PointX="10.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelDBModel.SocialProfile" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelDBModel.Subscribe" Width="1.5" PointX="12.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelDBModel.Tag" Width="1.5" PointX="12.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelDBModel.Tax" Width="1.5" PointX="12.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelDBModel.Widget" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelDBModel.BlogDetail" Width="1.5" PointX="0.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelDBModel.BlogImage" Width="1.5" PointX="14.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelDBModel.Blog" Width="1.5" PointX="14.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelDBModel.PostTag" Width="1.5" PointX="14.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelDBModel.PostView" Width="1.5" PointX="8.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelDBModel.RoomCategory" Width="1.5" PointX="11.375" PointY="15.75" />
+        <EntityTypeShape EntityType="HotelDBModel.User" Width="1.5" PointX="13.375" PointY="15.75" />
+        <EntityTypeShape EntityType="HotelDBModel.BlockedRoom" Width="1.5" PointX="15.375" PointY="15.75" />
+        <EntityTypeShape EntityType="HotelDBModel.BlogUser" Width="1.5" PointX="17.375" PointY="0.75" />
+        <EntityTypeShape EntityType="HotelDBModel.tblUser" Width="1.5" PointX="17.375" PointY="4.75" />
+        <EntityTypeShape EntityType="HotelDBModel.UserAccessCode" Width="1.5" PointX="17.375" PointY="11.75" />
+        <EntityTypeShape EntityType="HotelDBModel.Voucher" Width="1.5" PointX="13.625" PointY="22.375" />
+        <AssociationConnector Association="HotelDBModel.FK_Voucher_RoomCategory" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

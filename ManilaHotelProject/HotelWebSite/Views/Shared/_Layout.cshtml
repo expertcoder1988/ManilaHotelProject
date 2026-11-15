@@ -1,0 +1,1155 @@
+﻿
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <meta name="Keyword" content="@ViewBag.keywords" />
+    <meta name="description" content="@ViewBag.Description" />
+    <!-- External CSS libraries -->
+    <link rel="stylesheet" type="text/css" href="~/Content/Assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/Assets/css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/Assets/css/bootstrap-submenu.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/Assets/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="~/Content/Assets/css/leaflet.css" type="text/css">
+    <link rel="stylesheet" href="~/Content/Assets/css/map.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="~/Content/Assets/fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/Assets/fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/Assets/fonts/linearicons/style.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/Assets/css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/Assets/css/dropzone.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/Assets/css/magnific-popup.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/Assets/css/slick.css">
+
+
+    <link rel="canonical" href="@ViewBag.canonical" />
+
+
+    <link href="~/Content/SearchBar/Css/DesktopSearch/SearchBar.css" rel="stylesheet" />
+    <link href="~/Content/SearchBar/Css/DesktopSearch/SearchBarNine.css" rel="stylesheet" />
+    <link href="~/Content/SearchBar/Css/DesktopSearch/SearchBarSix.css" rel="stylesheet" />
+    <link href="~/Content/SearchBar/Css/DesktopSearch/SearchBarTen.css" rel="stylesheet" />
+
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" type="text/css" href="~/Content/Assets/css/initial.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/Assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/Assets/css/skins/yellow.css">
+
+    <!-- Favicon icon -->
+    <link rel="shortcut icon" href="~/Content/Assets/img/favicon.jpg" type="image/x-icon">
+
+    <!-- Google fonts -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800%7CPlayfair+Display:400,700%7CRoboto:100,300,400,400i,500,700">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link rel="stylesheet" type="text/css" href="~/Content/Assets/css/ie10-viewport-bug-workaround.css">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script type="text/javascript" src="~/Content/Assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="~/Content/Assets/js/ie-emulation-modes-warning.js"></script>
+
+
+    <!-- Globl site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-230938005-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-230938005-1');
+    </script>
+
+    <script type="application/ld+json">
+        {
+            "@@context": "https://schema.org",
+            "@@type": "Hotel",
+            "name": "Manila Heights Hotel Naran",
+            "description": "Enjoy your Vacations at the best Hotel in Naran. Are you looking for a hotel in Naran that has comfortable and well-appointed rooms? Look no further than Manila Heights Hotel Naran. Our rooms are large and equipped with all the amenities you need for a relaxing stay, including free Wi-Fi, cable TV, and a restaurant.",
+            "address": {
+                "@@type": "PostalAddress",
+                "addressCountry": "Pakistan",
+                "addressLocality": "Naran",
+                "addressRegion": "Mansehra",
+                "postalCode": "21200",
+                "streetAddress": "Manila Heights Hotel Naran, N 15 Mansehra - Naran - Jalkhad - Chilas Rd, Naran, Mansehra, Khyber Pakhtunkhwa 21200"
+            },
+            "telephone": "+92-3132015555",
+            "photo": "https://manilaheights.com/content/assets/img/Slider/Banner.jpg",
+            "starRating": {
+                "type": "Rating",
+                "ratingValue": "4"
+            },
+            "priceRange": "$40 - $100"
+        }</script>
+    <meta property="og:title" content="Manila Height Hotel Naran | 3 Star Hotel in Naran" />
+    <meta property="og:url" content="https://manilaheights.com/" />
+    <meta property="og:image" content="https://manilaheights/content/assets/img/Slider/Banner.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Are you looking for a hotel in Naran that has comfortable and well-appointed rooms? Look no further than Manila Heights Hotel Naran. Our rooms are large and equipped with all the amenities you need for a relaxing stay, including free Wi-Fi, cable TV, and a restaurant. Plus, our hotel at Naran resides in the heart of the Valley, so you'll be close to all the best attractions the city offers." />
+    <meta property="og:locale" content="en_US" />
+
+
+
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function () {
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > 50) {
+                    document.getElementById("navbar_top").classList.add("fixed-top");
+                    // add padding top to show content behind navbar
+                    navbar_height = document.querySelector(".navbar").offsetHeight;
+                    document.body.style.paddingTop = navbar_height + "px";
+                } else {
+                    document.getElementById("navbar_top").classList.remove("fixed-top");
+                    // remove padding top from body
+                    document.body.style.paddingTop = "0";
+                }
+            });
+        });
+        // DOMContentLoaded  end
+    </script>
+
+    <style>
+
+
+        .float {
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            bottom: 10px;
+            right: 10px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+        }
+
+        .floatp {
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            bottom: 70px;
+            right: 10px;
+            background-color: #25d366;
+            color: #fff;
+            background-color: black;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+        }
+
+        .my-float {
+            margin-top: 10px;
+        }
+
+        .my-floatp {
+            margin-top: 10px;
+        }
+    </style>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KDCDQ4V');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta name="facebook-domain-verification" content="q27qbrz5mt8bmn8sb5pirxhr8kjrw8" />
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '606787514043039');
+        fbq('track', 'PageView');
+    </script>
+    <!--<noscript>
+        <img height="1" width="1" style="display:none"
+             src="https://www.facebook.com/tr?id=606787514043039&ev=PageView&noscript=1" />
+    </noscript> -->
+    <!-- End Meta Pixel Code -->
+</head>
+<body>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KDCDQ4V"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Top header start -->
+    <header class="top-header" id="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-7 col-sm-7 col-md-7 col-lg-6">
+                    <div class="list-inline">
+                        <a href="tel:+923132015555" class="n-575"><i class="fa fa-phone"></i>+92-3132015555</a>
+                        <a href="email:info@manilaheights.pk"><i class="fa fa-envelope"></i>info@manilaheights.com</a>
+                    </div>
+                </div>
+                <div class="col-5 col-sm-5 col-md-5 col-lg-6">
+                    <ul class="social-list clearfix pull-right">
+                        <li>
+                            <a href="https://www.facebook.com/manilaheightshotel/" target="_blank" class="facebook">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/ManilaHeights" target="_blank" class="twitter">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/manilaheightshotel/" target="_blank" class="instagram">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.reddit.com/user/ManilaHeightsHotel" target="_blank" class="reddit">
+                                <i class="fa fa-reddit"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.pinterest.com/manilaheightshotel" target="_blank"
+                               class="rss">
+                                <i class="fa fa-rss"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Top header end -->
+    <!-- Main header start -->
+    <header class="main-header header-shrink">
+        <div class="container">
+            <nav id="navbar_top" class="navbar navbar-expand-lg navbar-light">
+                <a href="@Url.Action("Index","Home")" class="logo">
+                    <img src="https://manilaheights.com/Content/assets/img/logos/logo.png" alt="logo" />
+                </a>
+                <button class="navbar-toggler" id="drawer" type="button">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="navbar-collapse collapse" id="navbar">
+                    <ul class="navbar-nav justify-content-start w-100">
+                        <li class="nav-item">
+                            <a role="button" class="nav-link " href="@Url.Action("Index","Home")" ToolTip="Home">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a role="button" class="nav-link" href="@Url.Action("Index","PlacesandActivities")" ToolTip="Places & Activities">Places & Activities</a>
+                        </li>
+                        <li class="nav-item">
+                            <a role="button" class="nav-link" href="@Url.Action("Index","Blogs")" ToolTip="Blog">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a role="button" href="@Url.Action("Index","Contact")" class="nav-link"> Contact Us </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a role="button" href="@Url.Action("Index","AboutUs")" class="nav-link dropdown-toggle"> About Us </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li class="nav-item">
+                                    <a role="button" class="nav-link" href="@Url.Action("Index","Gallery")" ToolTip="Gallery">Gallery</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a role="button" class="nav-link" href="@Url.Action("Index","Restaurant")" ToolTip="Blog">Restaurant</a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li class="nav-item submit-property-button">
+                            <a href="@Url.Action("Index","Home")" class="button btn-3"> Book Now! </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+    <!-- Main header end -->
+    <!-- Sidenav start -->
+    <nav id="sidebar" class="nav-sidebar" style="z-index: 2147483647">
+        <!-- Close btn-->
+        <div id="dismiss">
+            <i class="fa fa-close"></i>
+        </div>
+        <div class="sidebar-inner">
+            <div class="sidebar-logo">
+                <img src="../Content/assets/img/logos/logo.png" alt="sidebarlogo">
+            </div>
+            <div class="sidebar-navigation">
+                <h3 class="heading">Pages</h3>
+                <ul class="menu-list">
+                    <li class="nav-item">
+                        <a role="button" class="dropdown-item" href="@Url.Action("Index","Home")" ToolTip="Home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a role="button" class="dropdown-item" href="@Url.Action("Index","AboutUs")" ToolTip="About Us">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a role="button" class="dropdown-item" href="@Url.Action("Index","Gallery")" ToolTip="Gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a role="button" class="dropdown-item" href="@Url.Action("Index","PlacesandActivities")" ToolTip="Places & Activities">Places & Activities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a role="button" class="dropdown-item" href="@Url.Action("Index","Restaurant")" ToolTip="Blog">Restaurant</a>
+                    </li>
+                    <li class="nav-item">
+                        <a role="button" href="@Url.Action("Index","Contact")" class="dropdown-item"> Contact Us </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="get-in-touch">
+                <h3 class="heading">Get in Touch</h3>
+                <div class="sidebar-contact-info">
+                    <div class="icon">
+                        <i class="fa fa-phone"></i>
+                    </div>
+                    <div class="body-info">
+                        <a href="tel:+923132015555">+923132015555</a>
+                    </div>
+                </div>
+                <div class="sidebar-contact-info">
+                    <div class="icon">
+                        <i class="fa fa-envelope"></i>
+                    </div>
+                    <div class="body-info">
+                        <a href="mailto:info@manilaheights.com"> info@manilaheights.com</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="get-social">
+                <h3 class="heading">Get Social</h3>
+                <a href="https://www.facebook.com/manilaheightshotel/" target="_blank" class="facebook">
+                    <i class="fa fa-facebook" style="color: #37404d"></i>
+                </a>  <a href="https://twitter.com/" target="_blank" class="twitter">
+                    <i class="fa fa-twitter" style="color: #37404d"></i>
+                </a>
+                <a href="https://www.instagram.com/manilaheightshotel" target="_blank" class="instagram">
+                    <i class="fa fa-instagram" style="color: #37404d"></i>
+                </a>
+
+                <a href="https://www.reddit.com/user/ManilaHeightsHotel" target="_blank" class="reddit">
+                    <i class="fa fa-reddit" style="color: #37404d"></i>
+                </a>
+
+                <a href="https://www.pinterest.com/manilaheightshotel" target="_blank"
+                   class="rss">
+                    <i class="fa fa-rss" style="color: #37404d"></i>
+                </a>
+
+            </div>
+            <a href="https://wa.me/923132015555? text=Hi! Manila Heights."
+               class="float"
+               target="_blank">
+                <i class="fa fa-whatsapp my-float"></i>
+            </a>
+            <a href="tel:+923498883391" class="floatp" target="_blank">
+                <i class="fa fa-phone my-floatp"></i>
+            </a>
+        </div>
+    </nav>
+    <!-- Sidenav end -->
+
+    @RenderBody()
+
+    <!-- Our service there start -->
+    <div class="our-service-there">
+        <div class="our-service-there-inner">
+            <div class="container">
+                <!-- Main title -->
+                <div class="main-title main-title-3">
+                    <a href="https://manilaheights.com/about-hotel-naran"> <h2>Experience Luxury and Serenity at Manila Heights Hotel in Naran</h2></a>
+                    <p>
+                        Discover the perfect blend of luxury and nature at Manila Heights Hotel, the leading hotel in Naran, Kaghan Valley. Escape the chaos of city life and find peace, relaxation, and privacy in our stunning location. Surrounded by breathtaking natural beauty, our Naran hotel offers comfortable and elegantly designed rooms equipped with all the modern amenities you need for a rejuvenating stay. Whether you're planning a romantic getaway or a family vacation, Manila Heights Hotel & Restaurant is your ideal choice for an unforgettable experience.
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 wow fadeInLeft delay-04s">
+                        <div class="bg-service-color">
+                            <div class="services-info-4">
+                                <div class="icon">
+                                    <i class="flaticon-people-1"></i>
+                                </div>
+                                <div class="detail">
+                                    <h3>
+                                        <a href="https://manilaheights.com/about-hotel-naran">Exquisite Dining at Manila Heights Restaurant Naran </a>
+                                    </h3>
+                                    <p>
+                                        Indulge in an exceptional dining experience at our renowned restaurant in Naran. Savour a diverse menu featuring local and international cuisines, crafted to delight your taste buds. Our culinary team ensures a memorable dining experience that will enhance your stay at the best hotel in Naran.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="services-info-4">
+                                <div class="icon">
+                                    <i class="flaticon-symbol-1"></i>
+                                </div>
+                                <div class="detail">
+                                    <h3>
+                                        <a href="https://manilaheights.com/about-hotel-naran">Secured Free Parking</a>
+                                    </h3>
+                                    <p>
+                                        Enjoy hassle-free parking at our Naran hotel with our accessible parking facility, a significant advantage for our guests. This convenient feature makes Manila Heights Hotel the top choice for travellers seeking an affordable yet luxurious stay in Naran.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="services-info-4 mb-0">
+                                <div class="icon">
+                                    <i class="flaticon-apartment"></i>
+                                </div>
+                                <div class="detail">
+                                    <h3>
+                                        <a href="https://manilaheights.com/about-hotel-naran">Breathtaking Natural Views </a>
+                                    </h3>
+                                    <p>
+                                        Immerse yourself in the stunning natural scenery surrounding Manila Heights Hotel in Naran. Our guests are treated to spectacular views of majestic mountains and lush forests right from their rooms, offering an unparalleled experience of the enchanting Kaghan Valley.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 wow fadeInRight delay-04s">
+                        <div class="">
+                            <img src="~/Content/assets/img/services.jpg"
+                                 alt="avatar-6"
+                                 class="img-fluid" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Our service there end -->
+
+    <div class="counters-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 align-self-center wow fadeInLeft delay-04s">
+                    <div class="">
+                        <div class="main-title main-title-3 mb-0">
+                            <a href="https://manilaheights.com/about-hotel-naran"> <h2 style="color:white">Discover the Best Family Hotel in Naran Valley </h2></a>
+                            <P>
+                                Manila Heights Hotel is your ultimate family-friendly destination in Naran Valley, offering a perfect blend of comfort, luxury, and breathtaking natural beauty. As the best family hotel in Naran, we provide spacious rooms and suites designed to accommodate families of all sizes, ensuring everyone has a memorable and enjoyable stay. Our hotel features an array of amenities, including a kid-friendly restaurant serving delicious local and international cuisines, as well as a range of activities and entertainment options for all ages. With its convenient location near Naran's top attractions and its welcoming atmosphere, Manila Heights Hotel guarantees an unforgettable family vacation in the heart of the stunning Kaghan Valley.
+                            </P>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 wow fadeInRight delay-04s">
+                    <div class="counters-3-inner">
+                        <div class="counter-box-3 d-flex">
+                            <i class="flaticon-tag"></i>
+                            <div class="detail">
+                                <h2 style="color:white">Hospitable Staff</h2>
+                            </div>
+                        </div>
+                        <div class="counter-box-3 d-flex">
+                            <i class="flaticon-symbol-1"></i>
+                            <div class="detail">
+                                <h2 style="color:white">Relaxing Stay</h2>
+                            </div>
+                        </div>
+                        <div class="counter-box-3 d-flex">
+                            <i class="flaticon-people"></i>
+                            <div class="detail">
+                                <h2 style="color:white">Onsite Restaurant</h2>
+                            </div>
+                        </div>
+                        <div class="counter-box-3 d-flex">
+                            <i class="flaticon-people-1"></i>
+                            <div class="detail">
+                                <h2 style="color:white">Stunning Views</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Counters 3 end -->
+    <!-- Agent section start -->
+    <div class="agent-section content-area-17 comon-slick"
+         style="margin-top: 100px">
+        <div class="container">
+            <!-- Main title -->
+            <div class="main-title">
+                <a href="https://manilaheights.com/visit-naran-places"><h2 style="color: #37404d">Popular Places near Manila Heights Hotel Naran</h2></a>
+                <p>
+                    Anyone visiting Naran for the first time will find plenty of places to
+                    explore near the Manila Heights Hotel Naran. The hotel's centralized
+                    location makes it easy to reach many of the Valley's famous attractions.
+                    For those looking to do some shopping, the hotel Naran is just a short
+                    walk from the Naran Bazaar, where you'll find both local shops and
+                    international brands. And, of course, no visit to Naran would be
+                    complete without sampling the local cuisine. So whether you're looking
+                    to relax or explore, Manila Heights Hotel is the perfect base for your
+                    stay in Naran.
+                </p>
+            </div>
+            <div class="slick row comon-slick-inner"
+                 data-slick='{"slidesToShow": 4, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 2}}, {"breakpoint": 768,"settings":{"slidesToShow": 1}}]}'>
+                <div class="item slide-box wow fadeInRight delay-04s">
+                    <div class="agent-1">
+                        <div class="member-thumb">
+                            <img src="~/Content/assets/img/Places & Activites/4.jpg"
+                                 alt="agent-1"
+                                 class="img-fluid w-100" />
+                        </div>
+                        <div class="member-content-wrap">
+                            <div class="member-name-designation">
+                                <a href="https://manilaheights.com/visit-naran-places"> <h4 class="member-name">Shogran</h4></a>
+                                <p class="member-designation">
+                                    The perfect escape from the city, Shogran is a small hill
+                                    station located an hour's drive outside of Balakot. The
+                                    landscape here varies between lush greenery and pine forests
+                                    with panoramic views that will take your breath away when
+                                    they're clear as day!
+                                </p>
+                                <div class="social-list clearfix">
+                                    <a href="https://goo.gl/maps/8iQmR1tXzkKQxxCZ7" target="_blank"><i class="fa fa-map-marker"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item slide-box wow fadeInRight delay-04s">
+                    <div class="agent-1">
+                        <div class="member-thumb">
+                            <img src="~/Content/assets/img/Places & Activites/1.jpg"
+                                 alt="agent-1"
+                                 class="img-fluid w-100" />
+                        </div>
+                        <div class="member-content-wrap">
+                            <div class="member-name-designation">
+                                <a href="https://manilaheights.com/visit-naran-places">
+                                    <h4 class="member-name">Saif ul Malook Lake</h4>
+                                </a>
+                                <p class="member-designation">
+                                    The picturesque lake in Naran is a popular spot for tourists
+                                    looking to take advantage of the region's natural beauty. Saif
+                                    ul Malook is a stunning sight to behold, and it's not hard for
+                                    people to visit that spectacular attraction.
+                                </p>
+                                <div class="social-list clearfix">
+                                    <a href="https://goo.gl/maps/P2xMX4CL1EXGZaxA8" target="_blank"><i class="fa fa-map-marker"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item slide-box wow fadeInRight delay-04s">
+                    <div class="agent-1">
+                        <div class="member-thumb">
+                            <img src="~/Content/assets/img/Places & Activites/2.jpg"
+                                 alt="agent-1"
+                                 class="img-fluid w-100" />
+                        </div>
+                        <div class="member-content-wrap">
+                            <div class="member-name-designation">
+                                <a href="https://manilaheights.com/visit-naran-places">
+                                    <h4 class="member-name">Babusar Top</h4>
+                                </a>
+                                <p class="member-designation">
+                                    The magnificent Babusar Top is a must-see for those travelling
+                                    through the north of Pakistan. The 70 kilometers from Naran to
+                                    Thak Nala, at its southern end, and Chilas on your way back are
+                                    both spectacular destinations that you won't want to miss!
+                                </p>
+                                <div class="social-list clearfix">
+                                    <a href="https://goo.gl/maps/2UEvuYMtux76QAk26" target="_blank"><i class="fa fa-map-marker"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item slide-box wow fadeInRight delay-04s">
+                    <div class="agent-1">
+                        <div class="member-thumb">
+                            <img src="~/Content/assets/img/Places & Activites/3.jpg"
+                                 alt="agent-1"
+                                 class="img-fluid w-100" />
+                        </div>
+                        <div class="member-content-wrap">
+                            <div class="member-name-designation">
+                                <a href="https://manilaheights.com/visit-naran-places">
+                                    <h4 class="member-name">Siri PAYE</h4>
+                                </a>
+                                <p class="member-designation">
+                                    The enchanting landscape of Siri PAYE is a must-see for anyone
+                                    travelling to Shogran. The green carpeted land, covered under
+                                    clouds and snowy mountains, will captivate your senses. The road
+                                    conditions aren't excellent throughout most parts, but it's
+                                    worth seeing for an unforgettable experience.
+                                </p>
+                                <div class="social-list clearfix">
+                                    <a href="https://goo.gl/maps/nKDfBNi7aH3bNpoa6" target="_blank"><i class="fa fa-map-marker"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Agent section end -->
+    <!-- Testimonial 3 section start-->
+    <div class="testimonials-3 content-area-7 comon-slick">
+        <div class="container">
+            <!-- Main title -->
+            <div class="main-title main-title-3">
+                <h2 style="color:white">Hear From Our Guests</h2>
+                <h3 style="color:white">Why They Love Staying at Manila Heights Hotel Naran?</h3>
+                <p>Discover why our guests rave about their experiences at Manila Heights Hotel Naran. From stunning views to exceptional service, families share their memorable moments and reasons why they consider us their top choice in Naran Valley. Read their heartfelt testimonials and see how our hotel in Naran Valley creates unforgettable stays for every guest.</p>
+            </div>
+            <div class="slick row comon-slick-inner"
+                 data-slick='{"slidesToShow": 2, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 1}}, {"breakpoint": 768,"settings":{"slidesToShow": 1}}]}'>
+                <div class="item slide-box wow fadeInRight delay-04s">
+                    <div class="testimonials-inner">
+                        <div class="user">
+                            <a href="https://www.google.com/travel/hotels/manila%20heights/entity/CgsIp4HthaPUtrGPARAB/reviews?q=manila%20heights&g2lb=2502548%2C2503771%2C2503781%2C4258168%2C4270442%2C4284970%2C4291517%2C4306835%2C4597339%2C4649665%2C4722900%2C4723331%2C4738544%2C4741664%2C4757164%2C4758493%2C4762561%2C4786153%2C4786958&hl=en-PK&gl=pk&ssta=1&rp=EKeB7YWj1LaxjwEQp4HthaPUtrGPATgCQABIAcABAg&ictx=1&sa=X&ved=0CAAQ5JsGahcKEwiI1bX65KL4AhUAAAAAHQAAAAAQCA&utm_campaign=sharing&utm_medium=link&utm_source=htls&ts=CAESABpJCisSJzIlMHgzOGU3NTFlNmJiMzIwNDViOjB4OGY2MmRhYTIzMGJiNDBhNxoAEhoSFAoHCOYPEAYYGBIHCOYPEAYYGRgBMgIQACoECgAaAA">
+                                <img class="media-object"
+                                     src="~/Content/assets/img/logos/google review.svg"
+                                     alt="user" />
+                            </a>
+                        </div>
+                        <div class="testimonial-info">
+                            <h3>Muhammad Moazzam Ali</h3>
+                            <p>Google Review</p>
+                            <p>
+                                Such a nice place to stay with kind hosts. You can get value for
+                                your money. Got a good experience while my stay. Regarding
+                                hospitality, service and security.
+                            </p>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item slide-box wow fadeInRight delay-04s">
+                    <div class="testimonials-inner">
+                        <div class="user">
+                            <a href="https://www.google.com/travel/hotels/manila%20heights/entity/CgsIp4HthaPUtrGPARAB/reviews?q=manila%20heights&g2lb=2502548%2C2503771%2C2503781%2C4258168%2C4270442%2C4284970%2C4291517%2C4306835%2C4597339%2C4649665%2C4722900%2C4723331%2C4738544%2C4741664%2C4757164%2C4758493%2C4762561%2C4786153%2C4786958&hl=en-PK&gl=pk&ssta=1&rp=EKeB7YWj1LaxjwEQp4HthaPUtrGPATgCQABIAcABAg&ictx=1&sa=X&ved=0CAAQ5JsGahcKEwiI1bX65KL4AhUAAAAAHQAAAAAQCA&utm_campaign=sharing&utm_medium=link&utm_source=htls&ts=CAESABpJCisSJzIlMHgzOGU3NTFlNmJiMzIwNDViOjB4OGY2MmRhYTIzMGJiNDBhNxoAEhoSFAoHCOYPEAYYGBIHCOYPEAYYGRgBMgIQACoECgAaAA">
+                                <img class="media-object"
+                                     src="~/Content/assets/img/logos/google review.svg"
+                                     alt="user" />
+                            </a>
+                        </div>
+                        <div class="testimonial-info">
+                            <h3>Fatima Tu Zahra</h3>
+                            <p>Google Review</p>
+                            <p>
+                                Excellent experience at manilla heights, good services, spacious
+                                rooms, hot water facilities, wifi availability, good view of river
+                                kunhar, food quality ok, best for families, away from the rush of
+                                Naran Bazar...
+                            </p>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item slide-box wow fadeInLeft delay-04s">
+                    <div class="testimonials-inner">
+                        <div class="user">
+                            <a href="https://www.google.com/travel/hotels/manila%20heights/entity/CgsIp4HthaPUtrGPARAB/reviews?q=manila%20heights&g2lb=2502548%2C2503771%2C2503781%2C4258168%2C4270442%2C4284970%2C4291517%2C4306835%2C4597339%2C4649665%2C4722900%2C4723331%2C4738544%2C4741664%2C4757164%2C4758493%2C4762561%2C4786153%2C4786958&hl=en-PK&gl=pk&ssta=1&rp=EKeB7YWj1LaxjwEQp4HthaPUtrGPATgCQABIAcABAg&ictx=1&sa=X&ved=0CAAQ5JsGahcKEwiI1bX65KL4AhUAAAAAHQAAAAAQCA&utm_campaign=sharing&utm_medium=link&utm_source=htls&ts=CAESABpJCisSJzIlMHgzOGU3NTFlNmJiMzIwNDViOjB4OGY2MmRhYTIzMGJiNDBhNxoAEhoSFAoHCOYPEAYYGBIHCOYPEAYYGRgBMgIQACoECgAaAA">
+                                <img class="media-object"
+                                     src="~/Content/assets/img/logos/google review.svg"
+                                     alt="user" />
+                            </a>
+                        </div>
+                        <div class="testimonial-info">
+                            <h3>Arbab Latif</h3>
+                            <p>Google Review</p>
+                            <p>
+                                If you are visiting Naran and looking for an excellent place to
+                                stay, go to Manila heights. It has a beautiful valley view that
+                                you can not find in the Bazar area. The rooms are spacious and
+                                clean. Wifi is also available.
+                            </p>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial 3 end -->
+    <!-- Blog start -->
+    <!-- Blog start -->
+
+    <div class="blog comon-slick content-area">
+        <div class="container">
+            <!-- Main title -->
+            <div class="main-title">
+                <h2><a href="https://manilaheights.com/blog-manila-naran" style="color: #37404d">Stay Updated - Your Go-To Source for Naran Updates</a></h2>
+                <p>
+                    Explore our blog for the latest Naran updates, travel tips, and comprehensive guides to make the most of your visit to
+                    Naran Kaghan Valley. Discover exciting news about local events, seasonal highlights, and exclusive insights into the
+                    best places to visit and hidden gems around Naran. Our blog provides valuable information to help you plan your perfect
+                    getaway, from the top activities and dining options to essential travel advice. Stay informed and inspired to create
+                    unforgettable memories during your stay at Manila Heights Hotel.
+                </p>
+            </div>
+
+            @{
+                var blogs = new HotelWebsite.Controllers.BlogsController().GetAllBlogs();
+            }
+
+            <div class="blog comon-slick content-area">
+                <div class="container">
+                    <!-- Main title -->
+                    <div class="main-title">
+                        <h2><a href="https://manilaheights.com/blog-manila-naran" style="color: #37404d">Stay Updated - Your Go-To Source for Naran Updates</a></h2>
+                        <p>
+                            Explore our blog for the latest Naran updates, travel tips, and comprehensive guides to make the most of your visit to
+                            Naran Kaghan Valley. Discover exciting news about local events, seasonal highlights, and exclusive insights into the
+                            best places to visit and hidden gems around Naran. Our blog provides valuable information to help you plan your perfect
+                            getaway, from the top activities and dining options to essential travel advice. Stay informed and inspired to create
+                            unforgettable memories during your stay at Manila Heights Hotel.
+                        </p>
+                    </div>
+
+                    <div class="slick row comon-slick-inner"
+                         data-slick='{"slidesToShow": 3, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 2}}, {"breakpoint": 768,"settings":{"slidesToShow": 1}}]}'>
+                        @foreach (var item in blogs)
+                        {
+                            string detailUrl = "/post/" + item.PostId;
+                            <div class="item slide-box wow fadeInUp delay-04s">
+                                <div class="blog-3">
+                                    <div class="blog-image">
+                                        <a href="@detailUrl">
+                                            <img src="~/Uploads/blog/@item.DefaultImage" alt="hotel in naran" class="img-fluid w-100" />
+                                            <div class="date-box">@Convert.ToDateTime(item.PublishedDate).ToString("dd MMM")</div>
+                                            <div class="post-meta clearfix">
+                                                <span><i class="fa fa-user"></i> @item.Author</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="detail">
+                                        <h4>
+                                            <a href="@detailUrl" style="color:#000000">@item.Title</a>
+                                        </h4>
+                                        <a href="@detailUrl" class="read-more">Read More...</a>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                    <p class="text-end"><a href="#" class="btn_1 outline mt-2" data-cue="slideInUp" data-delay="600">View all News</a></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!--<div class="blog comon-slick content-area">
+        <div class="container">-->
+    <!-- Main title -->
+    <!--<div class="main-title">
+                <h2><a href="https://manilaheights.com/blog-manila-naran" style="color: #37404d">Stay Updated - Your Go-To Source for Naran Updates</a></h2>
+                <p>
+                    Explore our blog for the latest Naran updates, travel tips, and comprehensive guides to make the most of your visit to
+                    Naran Kaghan Valley. Discover exciting news about local events, seasonal highlights, and exclusive insights into the
+                    best places to visit and hidden gems around Naran. Our blog provides valuable information to help you plan your perfect
+                    getaway, from the top activities and dining options to essential travel advice. Stay informed and inspired to create
+                    unforgettable memories during your stay at Manila Heights Hotel.
+                </p>
+            </div>
+            <div class="slick row comon-slick-inner"
+                 data-slick='{"slidesToShow": 3, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 2}}, {"breakpoint": 768,"settings":{"slidesToShow": 1}}]}'>
+                <div class="item slide-box wow fadeInUp delay-04s">
+                    <div class="blog-3">
+                        <div class="blog-image">
+                            <img src="~/Content/assets/img/blog/3.jpg"
+                                 alt="blog-3"
+                                 class="img-fluid w-100" />
+                            <div class="date-box">27 Jun</div>
+                            <div class="post-meta clearfix">
+                                <span><i class="fa fa-user"></i> Kainat Tariq</span>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <h4>
+                                <a href="https://manilaheights.com/manila-hotel-naran-contact" style="color:#000000">How to have a Luxurious Trip to Naran on a Budget?</a>
+                            </h4>
+                            <p>
+                                Have you ever dreamed of exploring the breathtaking and serene
+                                village of Naran? Nestled in the Himalayan Mountains, this little
+                                town is a paradise for nature lovers and adventurers alike. A trip
+                                to Naran can be costly, but it is possible to have a luxurious
+                                trip on a budget with some careful planning!
+                            </p>
+                            <a href="https://manilaheights.com/manila-hotel-naran-contact" class="read-more">Read More...</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item slide-box wow fadeInRight delay-04s">
+                    <div class="blog-3">
+                        <div class="blog-image">
+                            <img src="~/Content/assets/img/blog/1.jpg"
+                                 alt="blog-3"
+                                 class="img-fluid w-100" />
+                            <div class="date-box">14 Jan</div>
+                            <div class="post-meta clearfix">
+                                <span><i class="fa fa-user"></i> Hassam Khan</span>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <h4>
+                                <a href="https://manilaheights.com/manila-hotel-naran-contact" style="color:#000000">Why Should You Visit Naran?</a>
+                            </h4>
+                            <p>
+                                There are various spectacular places to visit globally, but if
+                                you're looking for a destination that offers everything, Naran is
+                                perfect. From stunning natural scenery to ancient archaeological
+                                sites, this Valley has something for everyone. Whether you're a
+                                luxury traveler or an adventurer looking for a new challenge,
+                                Naran is worth adding to your list.
+                            </p>
+                            <a href="https://manilaheights.com/manila-hotel-naran-contact" class="read-more">Read More...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item slide-box wow fadeInUp delay-04s">
+                    <div class="blog-3">
+                        <div class="blog-image">
+                            <img src="~/Content/assets/img/blog/2.jpg"
+                                 alt="blog-3"
+                                 class="img-fluid w-100" />
+                            <div class="date-box">15 May</div>
+                            <div class="post-meta clearfix">
+                                <span><i class="fa fa-user"></i> Kainat Tariq</span>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <h4>
+                                <a href="https://manilaheights.com/manila-hotel-naran-contact" style="color:#000000">Manila Heights Hotel Naran Offers Luxury & Adventure</a>
+                            </h4>
+                            <p>
+                                Arise to the sounds of nature in one of Manila Heights Hotel
+                                Naran's luxurious rooms. Our Naran hotel offers a unique blend of
+                                luxury and adventure, making it the perfect destination for
+                                tourists, luxury travelers, and adventurers alike. Whether you're
+                                looking to explore the natural beauty of our island or indulge in
+                                some world-class pampering, Manila Heights Hotel Naran is the
+                                perfect place for you.
+                            </p>
+                            <a href="https://manilaheights.com/manila-hotel-naran-contact" class="read-more">Read More...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <!-- Blog end -->
+    <!-- Intro section start -->
+    <div class="intro-section">
+        <div class="intro-section-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9 col-md-7 col-sm-12">
+                        <h3>Unlock Exclusive Deals on Your Naran Hotel Booking</h3>
+                        <p style=" color: #fff; padding-right: 35px;">Don’t miss out on our exclusive offers for your stay at Manila Heights Hotel in Naran. Contact us directly to secure the best rates and access special discounts, ensuring a luxurious and affordable stay in the heart of Naran Valley. Enjoy premium comfort and unforgettable experiences while making the most of our budget-friendly deals. Book now to take advantage of these limited-time offers and elevate your travel experience!</p>
+                    </div>
+                    <div class="col-lg-3 col-md-5 col-sm-12">
+                        <a class="btn-2 btn-white" href="https://manilaheights.com/manila-hotel-naran-contact">
+                            <span>Get in Touch</span> <i class="arrow"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Intro section end -->
+    <!-- Footer start -->
+    <footer class="main-footer clearfix">
+        <div class="container">
+            <!-- Footer info-->
+            <div class="footer-info">
+                <div class="row">
+                    <!-- About us -->
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="footer-item fi2">
+                            <div class="main-title-2">
+                                <h2>Manila Heights Hotel & Restaurant Naran</h2>
+                            </div>
+                            <p>
+                                Manila Heights Hotel & Restaurant is the perfect place to stay
+                                when visiting Naran. With its convenient location, comfortable
+                                rooms, and delicious food, it's no wonder that Manila Heights is
+                                one of the best hotels in Naran. As you check-in at the hotel
+                                Naran, our friendly staff will ensure an enjoyable stay at the
+                                hotel.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Contact US -->
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="footer-item fi2">
+                            <div class="main-title-2">
+                                <h2>Contact Us</h2>
+                            </div>
+                            <ul class="personal-info">
+                                <li>
+                                    <i class="fa fa-map-marker"></i>
+                                    Address:
+                                    <a href="https://www.google.com/maps/place/Manila+Heights+%26+Restaurant/34.8858813,73.6388666,15z/data=!4m5!3m4!1s0x0:0x8f62daa230bb40a7!8m2!3d34.8858813!4d73.6388666">
+                                        N 15 Mansehra - Naran - Jalkhad - Chilas Rd, Naran, Mansehra,
+                                        Khyber Pakhtunkhwa 21200
+                                    </a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-envelope"></i>
+                                    Email:<a href="mailto:info@manilaheights.com">info@manilaheights.com</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-phone"></i>
+                                    Phone: <a href="tel:0997-430370">0997-430370</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-phone"></i>
+                                    Phone: <a href="tel:0997-430369">0997-430369</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-phone"></i>
+                                    Mobile: <a href="tel:+923498883391">+92-3498883391</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Links -->
+                    <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
+                        <div class="footer-item">
+                            <div class="main-title-2">
+                                <h2>Links</h2>
+                            </div>
+                            <ul class="links">
+                                <li>
+                                    <a href="@Url.Action("Index","Home")">Home</a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Index","AboutUs")">About Us</a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Index","Contact")">Contact Us</a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Index","TermsandConditions")" ToolTip="TermsandConditions">Terms & Conditions</a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Index","PrivacyPolicy")" ToolTip="Privacy Policy">Privacy Policy</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Subscribe -->
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="footer-item">
+                            <div class="main-title-2">
+                                <h2>Subscribe</h2>
+                            </div>
+                            <div class="newsletter clearfix">
+                                <p>
+                                    Sign Up for Our Newsletter to get Latest Updates and Offers.
+                                    Subscribe to receive news in your inbox.
+                                </p>
+                                <form class="form-inline d-flex" action="#">
+                                    <input class="form-control"
+                                           type="email"
+                                           id="email"
+                                           placeholder="Email Address..." />
+                                    <button class="btn button-theme" type="submit">
+                                        <i class="fa fa-paper-plane"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy-right">
+            <div class="container">
+                <div class="row clearfix">
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <p>
+                            &copy; 2022
+                            <a href="https://growbiztech.com/" target="_blank">Growbiz Tech (Pvt) Ltd</a>. All Rights Reserved.
+                        </p>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <ul class="social-list clearfix">
+                            <li>
+                                <a href="https://www.facebook.com/manilaheightshotel" target="_blank" class="facebook-bg">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/ManilaHeights" target="_blank" class="twitter-bg">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="linkedin-bg">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/channel/UCe5VNn_dpGLZoAQoDw5OBuA" target="_blank" class="google-bg">
+                                    <i class="fa fa-google-plus"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.pinterest.com/manilaheightshotel" target="_blank" class="rss-bg">
+                                    <i class="fa fa-rss"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer end -->
+    <!-- Property Video Modal -->
+    @*<div class="modal property-modal fade"
+             id="propertyModal"
+             role="dialog"
+             aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button"
+                                class="close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row modal-raw g-0">
+                            <div class="col-lg-12">
+                                <div class="modal-left-content">
+                                    <div id="carouselExampleControlsNoTouching"
+                                         class="carousel slide"
+                                         data-bs-touch="false"
+                                         data-bs-interval="false">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <iframe class="modalIframe w-100"
+                                                        src="https://www.youtube.com/embed/xywe1MxGxKw"
+                                                        allowfullscreen></iframe>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="~/Content/assets/img/img-1.png"
+                                                     alt="model-photo"
+                                                     class="w-100 img-fluid" />
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="~/Content/assets/img/img-2.png"
+                                                     alt="model-photo"
+                                                     class="w-100 img-fluid" />
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev"
+                                                type="button"
+                                                data-bs-target="#carouselExampleControlsNoTouching"
+                                                data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon"
+                                                  aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next"
+                                                type="button"
+                                                data-bs-target="#carouselExampleControlsNoTouching"
+                                                data-bs-slide="next">
+                                            <span class="carousel-control-next-icon"
+                                                  aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>*@
+
+    <script src="~/Content/Assets/js/jquery.min.js"></script>
+    <script src="~/Content/Assets/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Content/Assets/js/bootstrap-submenu.js"></script>
+    <script src="~/Content/Assets/js/rangeslider.js"></script>
+    <script src="~/Content/Assets/js/jquery.mb.YTPlayer.js"></script>
+    <script src="~/Content/Assets/js/wow.min.js"></script>
+    <script src="~/Content/Assets/js/bootstrap-select.min.js"></script>
+    <script src="~/Content/Assets/js/jquery.easing.1.3.js"></script>
+    <script src="~/Content/Assets/js/jquery.scrollUp.js"></script>
+    <script src="~/Content/Assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="~/Content/Assets/js/leaflet.js"></script>
+    <script src="~/Content/Assets/js/leaflet-providers.js"></script>
+    <script src="~/Content/Assets/js/leaflet.markercluster.js"></script>
+    <script src="~/Content/Assets/js/dropzone.js"></script>
+    <script src="~/Content/Assets/js/jquery.filterizr.js"></script>
+    <script src="~/Content/Assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="~/Content/Assets/js/slick.min.js"></script>
+    <script src="~/Content/Assets/js/maps.js"></script>
+    <script src="~/Content/Assets/js/sidebar.js"></script>
+    <script src="~/Content/Assets/js/app.js"></script>
+
+    <script src="~/Content/SearchBar/Rangepicker/moment.min.js"></script>
+    <script src="~/Content/SearchBar/Rangepicker/daterangepicker.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="~/Content/Assets/js/ie10-viewport-bug-workaround.js"></script>
+    <!-- Custom javascript -->
+    <script src="~/Content/Assets/js/ie10-viewport-bug-workaround.js"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,199 @@
+﻿
+@{
+    ViewBag.Title = "Available Rooms";
+
+    List<HotelWebSite.Models.PropertySearch> results = new List<HotelWebSite.Models.PropertySearch>();
+    if (Session["results"] != null)
+    {
+        results = (List<HotelWebSite.Models.PropertySearch>)Session["results"];
+    }
+
+}
+
+<div class="properties-section property-big content-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- Option bar start -->
+                <div class="option-bar">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-5 col-sm-5">
+                            <h4>
+                                <span class="heading-icon">
+                                    <i class="fa fa-th-list"></i>
+                                </span>
+                                <span class="title">Properties List</span>
+                            </h4>
+                        </div>
+                        <div class="col-lg-6 col-md-7 col-sm-7">
+                            <div class="sorting-options advanced-search">
+                                <select style="display:none" class="selectpicker search-fields sorting" name="new-to-old">
+                                    <option>New To Old</option>
+                                    <option>Old To New</option>
+                                    <option>Properties (High To Low)</option>
+                                    <option>Properties (Low To High)</option>
+                                </select>
+                                <a href="#" class="change-view-btn active-view-btn"><i class="fa fa-th-list"></i></a>
+                                <a href="#" class="change-view-btn"><i class="fa fa-th-large"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Option bar end -->
+                <div class="clearfix"></div>
+                @if (results.Count == 0)
+                {
+                    <p>No room available. Please try another dates.</p>
+                }
+                else
+                {
+
+                    <!-- property start -->
+                    foreach (var item in results)
+                    {
+                        string[] features = null;
+                        int? totalAmount = 0;
+
+                        if (item.Discount != null)
+                        {
+                            totalAmount = item.TotalAmount - (item.TotalAmount * item.Discount / 100);
+                        }
+                        else
+                        {
+                            totalAmount = item.TotalAmount;
+                        }
+
+
+                        <div class="property property-hp row g-0 fp2 clearfix wow fadeInUp delay-03s">
+                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                <!-- Property img -->
+                                <div class="property-img">
+                                    <div style="display:none" class="property-tag button alt featured">Featured</div>
+                                    <div style="display:none" class="property-tag button sale">For Sale</div>
+                                    <div class="property-price"><h4 style="color:white">Rs. @totalAmount</h4></div>
+                                    @*<img src="@Url.Action("Image", "Home", new { img = @item.imgURL })" alt="fp-list" class="img-fluid w-100">*@
+                                    <img src="http://103.152.255.44:8080/uploads/@item.imgURL" alt="fp-list" class="img-fluid w-100">
+                                    <div class="property-overlay">
+                                        <a style="display:none" href="#" class="overlay-link">
+                                            <i class="fa fa-link"></i>
+                                        </a>
+                                        <a style="display:none" class="overlay-link property-video" title="Lexus GS F">
+                                            <i class="fa fa-video-camera"></i>
+                                        </a>
+                                        <div class="property-magnify-gallery">
+                                            <a href="http://103.152.255.44:8080/uploads/" + @item.imgURL class="overlay-link">
+                                                <i class="fa fa-expand"></i>
+                                            </a>
+                                            <a href="http://103.152.255.44:8080/uploads/@item.imgURL" class="hidden"></a>
+                                            <a href="http://103.152.255.44:8080/uploads/@item.imgURL" class="hidden"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-8 col-md-8 col-sm-12 property-content">
+                                <div class="info">
+                                    <!-- title -->
+                                    <h1 class="title">
+                                        <a href="@Url.Action("RoomDetails", "SearchResult", new { Id = @item.RoomCateCode })">@item.RoomCategory</a>
+                                    </h1>@{
+                                        if (item.Breakfast == true)
+                                        {
+                                            <span>Breakfast Included</span>
+                                        }
+                                    }
+                                    <!-- Property address -->
+                                    <h5 class="property-address">
+                                        Policy: <a>@item.Name</a>
+                                    </h5>
+                                    <!-- Facilities List -->
+                                    <ul class="facilities-list fl-2 clearfix">
+                                        @{
+                                            if (item.Features != null)
+                                            {
+                                                features = item.Features.Split(',');
+
+                                                foreach (var itm in features)
+                                                {
+                                                    if (itm != "")
+                                                    {
+                                                        <li style="font-size:10px">
+                                                            <i class="fa fa-check"></i>
+                                                            <span>@itm.Replace('_', ' ')</span>
+                                                        </li>
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                    </ul>
+                                    <ul class="facilities-list fl-2 clearfix">
+                                        <li style="font-size:10px">
+                                            <i class="flaticon-user"></i>
+                                            <span>@item.AdultAllowed Adult Allowed</span>
+                                        </li>
+                                        <li style="font-size:10px">
+                                            <i class="flaticon-baby"></i>
+                                            <span>@item.NoOfChildAllowed Children Allowed</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="property-footer">
+                                    <span class="left">
+                                        <a style="display:none" href="#"><i class="fa fa-user"></i>Jhon Doe</a>
+                                        @*<input type="submit" class="btn btn-primary" value="Book This" />*@
+                                        <a class="btn btn-primary" role="button" href="@Url.Action("RoomDetails", "SearchResult", new { Id = @item.RoomCateCode })">Book This</a>
+                                    </span>
+                                    <span class="right">
+                                        <i class="fa fa-bed"></i>@item.NoOfRooms <span>Rooms Left</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    <!-- property end -->
+                    <!-- Pagination box start -->
+                    @*<div class="pagination-box text-center">
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination">
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">Prev</a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link  active" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">Next</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>*@
+                    <!-- Pagination box end -->
+                }
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div id="myModal" class="modal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" id="closemodal" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="title">Check Availability</h4>
+            </div>
+                <div class="modal-body">                   
+
+                </div>
+                <div style="display:none" class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    
+                </div>
+        </div>
+
+    </div>
+</div>
+
+

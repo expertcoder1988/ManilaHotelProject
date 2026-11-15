@@ -1,0 +1,170 @@
+﻿@using HotelWebSite.Models;
+
+@{
+    ViewBag.Title = "Best Hotels in Naran | Hotel Booking in Naran";
+
+    ViewBag.keywords = "Naran Hotel Booking / Best hotels in Naran ";
+
+    ViewBag.Description = "Find great Naran hotel rates for hotel booking in Naran. Enjoy a relaxing stay at one of the best hotels in Naran Pakistan. Book today & travel to Naran Kaghan.";
+
+
+
+    var blogs = (List<Post>)ViewBag.blogs;
+
+}
+
+<div class="blog-body content-area">
+    <div class="container">
+        <br />
+
+        <h2>Find out Everything You Need for Hotel Booking in Naran</h2>
+
+        <div class="row">
+            <div class="col-lg-8 col-md-12 col-xs-12">
+                <div class="row">
+                    @{
+                        foreach (var ro in blogs)
+                        {
+                            string detailUrl = Url.RouteUrl("postDetailRoute", new { postId = ro.PostId, slug = ro.Slug });
+                            // string detailUrl = "/post/" + ro.PostId + "/" + ro.Slug;
+
+                            <!-- Blog box start -->
+                <div class="blog-1">
+                    <div class="blog-inner">
+                        <div class="blog-overflow">
+                            <div class="blog-photo">
+                                <img src="https://manilaheights.com/uploads/blog/@ro.DefaultImage" alt="@ro.Title" class="img-fluid w-100">
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <h3>
+                                <a href="@detailUrl">@ro.Title</a>
+                            </h3>
+                            <ul class="post-meta clearfix">
+                                <li>
+                                    <i class="fa fa-user-o"></i> @ro.Author
+                                </li>
+                                <li>
+                                    <i class="fa fa-calendar-check-o"></i> @ro.PublishedDate
+                                </li>                              
+                            </ul>
+                            <p>@ro.ShortDescriptions</p>
+                        </div>
+                    </div>
+                </div>
+                            <!-- Blog box end -->
+
+                        }
+                    }
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-12 col-xs-12">
+                <div class="sidebar">
+                    <!-- Popular posts start-->
+                    <div class="sidebar-widget popular-posts">
+                        <div class="main-title-2">
+                            <h1>Recent Properties</h1>
+                        </div>
+                        <div class="d-flex mb-3 popular-posts-box">
+                            <a class="pr-3" href="https://manilaheights.com/">
+                                <img src="../content/assets/img/Restaurant/Deluxe.jpg"
+                                     alt="small-photo"
+                                     class="flex-shrink-0 me-3" />
+                            </a>
+                            <div class="detail align-self-center">
+                                <h4>
+                                    <a href="https://manilaheights.com/">Deluxe</a>
+                                </h4>
+                                <div class="listing-post-meta">
+                                    Starting From | <a href="#">Rs.9000</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3 popular-posts-box">
+                            <a class="pr-3" href="https://manilaheights.com/">
+                                <img src="../content/assets/img/Restaurant/Executive Triple.jpg"
+                                     alt="small-photo"
+                                     class="flex-shrink-0 me-3" />
+                            </a>
+                            <div class="detail align-self-center">
+                                <h4>
+                                    <a href="https://manilaheights.com/">Executive Triple</a>
+                                </h4>
+                                <div class="listing-post-meta">
+                                    Starting From | <a href="#">Rs.10000</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex popular-posts-box">
+                            <a class="pr-3" href="https://manilaheights.com/">
+                                <img src="../content/assets/img/Restaurant/Family Suite.jpg"
+                                     alt="small-photo"
+                                     class="flex-shrink-0 me-3" />
+                            </a>
+                            <div class="detail align-self-center">
+                                <h4>
+                                    <a href="https://manilaheights.com/">Family Suite</a>
+                                </h4>
+                                <div class="listing-post-meta">
+                                    Starting From | <a href="#">Rs.14000</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex popular-posts-box">
+                            <a class="pr-3" href="https://manilaheights.com/">
+                                <img src="../content/assets/img/Restaurant/Quad.jpg"
+                                     alt="small-photo"
+                                     class="flex-shrink-0 me-3" />
+                            </a>
+                            <div class="detail align-self-center">
+                                <h4>
+                                    <a href="https://manilaheights.com/">Quad Room</a>
+                                </h4>
+                                <div class="listing-post-meta">
+                                    Starting From | <a href="#">RS.16000</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Popular posts end-->
+                    <!-- Social media start -->
+                    <div class="social-media sidebar-widget clearfix">
+                        <!-- Main Title 2 -->
+                        <div class="main-title-2">
+                            <h1><span>Social</span> Media</h1>
+                        </div>
+                        <!-- Social list -->
+                        <ul class="social-list">
+                            <li>
+                                <a href="#" class="facebook-bg">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="linkedin-bg">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="google-bg">
+                                    <i class="fa fa-google-plus"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="rss-bg"><i class="fa fa-rss"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Social media end -->
+                </div>
+            </div>
+        </div>
+            </div>
+        </div>
+
+
+    <br />

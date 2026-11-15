@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="box-body">
+    <div align="center" class="box-header with-border callout callout-info">
+        <h4>Users List</h4>
+    </div>
+    <div>
+
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-xs-12">
+                <label for="Properties">Properties</label>
+                <select class="form-control" style="height:34px;"
+                        id="Properties" name="Properties">
+                    <option selected="selected" value="0">Please select</option>
+                </select>
+            </div>
+            <div class="col-lg-6 col-md-6 col-xs-12">
+                <h3 align="center">
+                    <a href="@Url.Action("AddNewUser","User")" Class="add button">Add New User </a>
+                </h3>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-12 col-xs-12">
+                <table class="table" id="userList">
+                    <tr>
+                        <th>User ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>User Id</th>
+                        <th>Email</th>
+                        <th>Mobile Num</th>
+                        <th>Date Created</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="~/Content/Admin/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script src="~/Scripts/EntityScript/User.js"></script>
